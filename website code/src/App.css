@@ -1,0 +1,121 @@
+#root {
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh;
+  padding-top: 50px; 
+}
+
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px; 
+  background-color: white;
+  padding: 2rem 3rem; 
+  border-radius: 15px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+}
+
+.image {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "DM Serif Text", serif;
+  color: #34495e;
+}
+
+header {
+  text-align: center; 
+  margin-bottom: 2rem; 
+}
+
+h1 {
+  color: #1d2a36; 
+  font-weight: 700; 
+  font-size: 2.5rem;
+}
+
+.select-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+select {
+  width: 100%; 
+  padding: 12px 40px 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #34495e; /* Added this line */
+  cursor: pointer;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.select-container::after {
+  content: '▼';
+  font-size: 1rem;
+  color: #34495e;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container {
+  max-height: 400px; 
+  overflow-y: auto; 
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9ecef; 
+}
+
+th {
+  position: sticky; 
+  top: 0; 
+  background-color: #f8f9fa;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f8; 
+}
+
+tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
